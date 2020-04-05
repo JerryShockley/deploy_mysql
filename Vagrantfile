@@ -9,10 +9,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define 'mysql-vm'
 
   config.vm.network :private_network, ip: '192.168.5.99'
-  config.vm.network :forwarded_port, guest: 3360, host: 3306
+  config.vm.network :forwarded_port, guest: 3306, host: 3306
   config.vm.hostname = "mysql.dev"
   config.ssh.insert_key = false
-  config.vm.synced_folder '~/src/deploy/role_dev/role_playbook/roles', '/vagrant/src', type: "nfs",
+  config.vm.synced_folder './', '/vagrant/src', type: "nfs",
     mount_options: ['rw', 'vers=3', 'tcp'],
     linux_nfs_options: ['rw', 'no_subtree_check', 'all_squash', 'async']
 
