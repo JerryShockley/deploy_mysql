@@ -21,4 +21,4 @@ vagrant destroy
 vagrant up
 ```
 
-To access the vm from outside connect to 192.168.5.99.
+To access the vm from outside connect to 192.168.5.99:3306.
