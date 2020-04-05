@@ -2,6 +2,7 @@
 .netrwhist
 .git
 .vagrant
+provisioning/roles/geerlingguy.mysql/
 /log
 /tmp
 /vendor
